@@ -26,7 +26,7 @@ Feature: Demo Website Testing
   
   @Oldtest
   Scenario Outline: Verify full name concatination
-  	Given open application in "Chrome"
+  	Given  open application in "Chrome"
   	When i enter "<firstname>" and "<middlename>" and"<lastname>"
   	Then full name is displayed
   	

@@ -1,5 +1,7 @@
 package stepDefinition;
 
+import java.io.File;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,16 +14,18 @@ import pageObject.Homepage;
 public class StepDefinition {
 static WebDriver driver;
 String fullName;
-
-	@Given("^open application in \"([^\"]*)\"$")
+File file;
+String url = "http://localhost:8888/demoPoc/";
+@Given("^open application in \"([^\"]*)\"$")
 	public void open_application_in(String browser) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	 
-		  System.setProperty("webdriver.chrome.driver","/Users/aniketmalusare/Documents/chromedriver");
+	 	file = new File(".//Resource//chromedriver");
+	 	
+		  System.setProperty("webdriver.chrome.driver",file.getPath());
 		  driver = new ChromeDriver();
 		 
 	  
-	  driver.get("http://localhost:8080/demoPoc/");
+	  driver.get(url);
 	  driver.manage().window().maximize();
 	 
 	
