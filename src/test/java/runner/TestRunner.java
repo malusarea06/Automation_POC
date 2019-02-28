@@ -13,16 +13,17 @@ import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 //import utilities.AzureReport;
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 @CucumberOptions(
 		features="Feature/MyFeature.feature",
 		glue= {"stepDefinition"},
-		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:"},
-		tags = {"@Newtest"}
+		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:"}
+	//	tags = {"@Newtest"}
 		)
-public class TestRunner{
+public class TestRunner extends AbstractTestNGCucumberTests{
 	
 	@BeforeClass
     public  static void setup() throws MalformedURLException {
@@ -34,7 +35,7 @@ public class TestRunner{
 	
 	@AfterClass
     public static void teardown() {
-        Reporter.loadXMLConfig(new File("/Users/aniketmalusare/eclipse-workspace/com.demopoc.capco/extent-config.xml"));
+        Reporter.loadXMLConfig(new File(".//extent-config.xml"));
         Properties p = System.getProperties();
         p.list(System.out);
         Reporter.setSystemInfo("user", System.getProperty("user.name"));

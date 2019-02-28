@@ -15,7 +15,7 @@ public class StepDefinition {
 static WebDriver driver;
 String fullName;
 File file;
-String url = "http://localhost:8888/demoPoc/";
+String url = "http://localhost:9999/demoPoc/";
 @Given("^open application in \"([^\"]*)\"$")
 	public void open_application_in(String browser) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
