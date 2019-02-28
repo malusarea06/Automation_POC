@@ -20,22 +20,22 @@
 Feature: Demo Website Testing
   @Newtest
   Scenario: Verify Full Name 
-  	Given  open application in Chrome
-  	When  i enter firstname and lastname
+  	Given  open application in "Chrome"
+  	When  i enter firstname and middlename and lastname
   	Then  full Name is displayed
   
-  
+  @Oldtest
   Scenario Outline: Verify full name concatination
   	Given open application in "Chrome"
-  	When i enter "<firstname>" and "<lastname>"
+  	When i enter "<firstname>" and "<middlename>" and"<lastname>"
   	Then full name is displayed
   	
   	Examples:
-  	| firstname | lastname |
-  	|Aniket | Malusare |
-  	| Dhiresh | Mundada |
-  	| Swapnal | Hingane |
-  	|Tejal | Thorve |
+  	| firstname | middlename | lastname |
+  	|Aniket | Satyawan | Malusare |
+  	| Karan | Rajesh | Patil |
+  	| Swapnil | Prakash |Hire |
+  	|Tejal | Shivaji | Thorve |
   	
   	
 

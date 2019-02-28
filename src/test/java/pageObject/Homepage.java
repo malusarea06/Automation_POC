@@ -12,6 +12,10 @@ public class Homepage {
 @FindBy(id="firstName")
 WebElement txtfname;
 
+@FindBy(id="middleName")
+WebElement txtmname;
+
+
 @FindBy(id="lastName")
 WebElement txtlname;
 
@@ -51,5 +55,12 @@ public void clickBtn()
 public String getFullName()
 {
 	return txtfullname.getAttribute("value");
+	}
+
+
+public void enterMiddleName(String mname)
+{
+	
+	txtmname.sendKeys(mname);
 	}
 }

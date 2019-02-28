@@ -19,8 +19,8 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="Feature/MyFeature.feature",
 		glue= {"stepDefinition"},
-		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:"}
-		//tags = {""}
+		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:"},
+		tags = {"@Newtest"}
 		)
 public class TestRunner{
 	

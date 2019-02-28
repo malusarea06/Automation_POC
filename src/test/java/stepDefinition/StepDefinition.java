@@ -21,20 +21,21 @@ String fullName;
 		  driver = new ChromeDriver();
 		 
 	  
-	  driver.get("http://localhost:8085/demoPoc/");
+	  driver.get("http://localhost:8080/demoPoc/");
 	  driver.manage().window().maximize();
 	 
 	
 	}
 
-	@When("^i enter \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void i_enter_and(String firstname, String lastname) throws Throwable {
+	@When("^i enter \"([^\"]*)\" and \"([^\"]*)\" and\"([^\"]*)\"$")
+	public void i_enter_and(String firstname, String middlename ,String lastname) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	  Homepage homepage = new Homepage(driver);
 	  homepage.enterFirstName(firstname);
 	  homepage.enterLastName(lastname);
+	  homepage.enterMiddleName(middlename);
 	  homepage.clickBtn();
-	  fullName = firstname +" "+ lastname;
+	  fullName = firstname +" "+middlename+" "+ lastname;
 	  
 	}
 
@@ -57,14 +58,15 @@ String fullName;
 		  driver.manage().window().maximize();
 	}
 
-	@When("^i enter firstname and lastname$")
-	public void i_enter_firstname_and_lastname() throws Throwable {
+	@When("^i enter firstname and middlename and lastname$")
+	public void i_enter_firstname_and_middlename_and_lastname() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		 Homepage homepage = new Homepage(driver);
 		  homepage.enterFirstName("Bhargav");
+		  homepage.enterMiddleName("Abhijeet");
 		  homepage.enterLastName("Bhupatkar");
 		  homepage.clickBtn();
-		  fullName = "BhargavBhupatkar";
+		  fullName = "BhargavAbhijeetBhupatkar";
 	}
 
 	@Then("^full Name is displayed$")
