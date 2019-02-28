@@ -12,16 +12,17 @@ import pageObject.Homepage;
 public class StepDefinition {
 static WebDriver driver;
 String fullName;
+String url = "http://localhost:9999/demoPoc/";
 
 	@Given("^open application in \"([^\"]*)\"$")
 	public void open_application_in(String browser) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	 
-		  System.setProperty("webdriver.chrome.driver","/Users/aniketmalusare/Documents/chromedriver");
+		  System.setProperty("webdriver.chrome.driver",".//Resource//chromedriver");
 		  driver = new ChromeDriver();
 		 
 	  
-	  driver.get("http://localhost:8085/demoPoc/");
+	  driver.get(url);
 	  driver.manage().window().maximize();
 	 
 	

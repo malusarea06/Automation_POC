@@ -20,7 +20,7 @@
 Feature: Demo Website Testing
   @Newtest
   Scenario: Verify Full Name 
-  	Given  open application in Chrome
+  	Given  open application in "Chrome"
   	When  i enter firstname and lastname
   	Then  full Name is displayed
   
