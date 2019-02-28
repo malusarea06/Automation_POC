@@ -4,7 +4,7 @@
 
 
 <head>
-	<meta charset='UTF-8' /> 
+	<meta charset='utf-8' /> 
 	<meta name='description' content='' />
 	<meta name='robots' content='noodp, noydir' />
 	<meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -15,14 +15,9 @@
 
 		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/bee7a4abdc590e21eec8618a90c81ff4d16e500a/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>ExtentReports 2.0</title>
+	<title>ExtentReports</title>
 
 	<style type='text/css'>
-			
-      
-        
-      
-    
 	</style>
 </head>
 
@@ -41,11 +36,10 @@
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
 			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1)" view='testrunner-logs-view'><i class='material-icons'>note</i></a></li>
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>Automation Report</span>
+		<span class='report-name'>ExtentReports</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -54,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 28, 2019 04:38:55 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 28, 2019 04:50:45 PM</span>
 				</a>
 			</li>
 			<li>
@@ -191,7 +185,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Demo Website Testing</span>
-						<span class='test-time'>Feb 28, 2019 04:38:55 PM</span>
+						<span class='test-time'>Feb 28, 2019 04:50:45 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -199,7 +193,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@Newtest</span>
 	</div>
-	<span class='duration right label'>0h 0m 2s+102ms</span>
+	<span class='duration right label'>0h 0m 2s+546ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Verify Full Name</span>
@@ -237,7 +231,7 @@
 	</ul>
 </div>
 <div class='scenariooutline node' test-id='6' status='pass'>
-	<span class='duration right label'>0h 0m 6s+241ms</span>
+	<span class='duration right label'>0h 0m 6s+196ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">Verify full name concatination</span>
@@ -406,7 +400,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 28, 2019 04:38:55 PM</td>
+										<td>Feb 28, 2019 04:50:45 PM</td>
 										<td class='linked' test-id='2'>Demo Website Testing.Verify Full Name</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -469,7 +463,7 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Feb 28, 2019 04:38:57 PM</td>
+                                                        <td>Feb 28, 2019 04:50:47 PM</td>
                                                         <td class='linked' test-id='5'>Demo Website Testing.Verify Full Name.Then full Name is displayed</td>
                                                         <td><pre><textarea>org.junit.ComparisonFailure: expected:<Bhargav[]Bhupatkar> but was:<Bhargav[ ]Bhupatkar>
 	at org.junit.Assert.assertEquals(Assert.java:115)
@@ -520,43 +514,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 28, 2019 04:38:55 PM</div>
+					<div class='panel-lead'>Feb 28, 2019 04:50:45 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 28, 2019 04:39:03 PM</div>
+			 		<div class='panel-lead'>Feb 28, 2019 04:50:54 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>8,670ms</div>
-				</div>
-			</div>
-			<div class='col s4'>
-				<div class='card-panel dashboard-environment'>
-					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
-					
-					<table>
-						<tr>
-							<th>Name</th>
-							<th>Value</th>
-						</tr>
-							<tr>
-								<td>user</td>
-								<td>aniketmalusare</td>
-							</tr>
-							<tr>
-								<td>os Name</td>
-								<td>Mac OS X</td>
-							</tr>
-							<tr>
-								<td>os Version</td>
-								<td>10.13.4</td>
-							</tr>
-					</table>
+					<div class='panel-lead'>9,001ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -583,15 +553,6 @@
 	</div>
 </div>
 <!-- dashboard view -->
-<div id='testrunner-logs-view' class='view hide'>
-	<div class='card-panel transparent np-v'>
-		<h5>TestRunner Logs</h5>
-		
-		<div class='card-panel'>
-				Test runner output message
-		</div>
-	</div>
-</div>
 <!-- testrunner-logs view -->
 		</div>
 		<!-- container -->
@@ -630,13 +591,6 @@
 		
 		
  		<script type='text/javascript'>
- 			
-      
-        $(document).ready(function() {
-          
-        });
-      
-    
  		</script>
 	</body>
 	

@@ -12,7 +12,7 @@ import pageObject.Homepage;
 public class StepDefinition {
 static WebDriver driver;
 String fullName;
-String url = "http://localhost:9999/demoPoc/";
+String url = "http://localhost:8888/demoPoc/";
 
 	@Given("^open application in \"([^\"]*)\"$")
 	public void open_application_in(String browser) throws Throwable {
