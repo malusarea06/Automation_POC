@@ -65,7 +65,7 @@ String url = "http://localhost:8888/demoPoc/";
 		  homepage.enterFirstName("Bhargav");
 		  homepage.enterLastName("Bhupatkar");
 		  homepage.clickBtn();
-		  fullName = "BhargavBhupatkar";
+		  fullName = "Bhargav Bhupatkar";
 	}
 
 	@Then("^full Name is displayed$")
