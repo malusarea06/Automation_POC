@@ -10,23 +10,32 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pageObject.Homepage;
+import utilities.ConfigFileReader;
 
 public class StepDefinition {
 static WebDriver driver;
+
+ConfigFileReader configreader;
 String fullName;
-File file;
-String url = "http://localhost:9999/demoPoc/";
+//File file;
+public String url;
+public String driverP;
 @Given("^open application in \"([^\"]*)\"$")
 	public void open_application_in(String browser) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	 	file = new File(".//Resource//chromedriver");
 	 	
-		  System.setProperty("webdriver.chrome.driver",file.getPath());
-		  driver = new ChromeDriver();
+	
+		configreader = new ConfigFileReader();
+	 	url = configreader.getAppUrlNightlyEnv();
+	 	driverP = configreader.getDriverPath();
+	 	
+	 	System.out.println(url+"\n"+driverP);
+		System.setProperty("webdriver.chrome.driver",driverP);
+		driver = new ChromeDriver();
 		 
 	  
-	  driver.get(url);
-	  driver.manage().window().maximize();
+		driver.get(url);
+		driver.manage().window().maximize();
 	 
 	
 	}
