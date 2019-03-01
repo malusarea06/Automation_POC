@@ -70,7 +70,7 @@ String url = "http://localhost:9999/demoPoc/";
 		  homepage.enterMiddleName("Abhijeet");
 		  homepage.enterLastName("Bhupatkar");
 		  homepage.clickBtn();
-		  fullName = "BhargavAbhijeetBhupatkar";
+		  fullName = "Bhargav Abhijeet Bhupatkar";
 	}
 
 	@Then("^full Name is displayed$")
