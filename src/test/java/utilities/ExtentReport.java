@@ -19,25 +19,23 @@ import stepDefinition.StepDefinition;
 public class ExtentReport {
 
 	
-	public static ExtentReporter Instance()
-    {
-	ExtentReporter extent;
-//String Path = "/Users/test/Desktop/temp/ExtentReport_" +  new Date().getTime()+".html";
-String Path = "/Users/test/Desktop/temp/ExtentReport_" +  new SimpleDateFormat("yyyyMMdd_HHmmSSS").format(new Date())+".html";
-System.out.println(Path);
-extent = new ExtentHtmlReporter(Path);
-return extent;
- }
 	
-	public static String capture(WebDriver driver,String screenShotName) throws IOException
+	
+	public static String capture(WebDriver driver) 
     {
         TakesScreenshot ts = (TakesScreenshot)driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
-        File file = new File("./output/scrernshots/");
-        String dest = file.getPath()+screenShotName+".png";
-        File destination = new File(dest);
-        FileUtils.copyFile(source, destination);        
-                    
-        return dest;
+        String path =  System.getProperty("user.dir")+"/Screenshots/"+new SimpleDateFormat("yyyy_MM_dd__HHmmSSS").format(new Date())+".png";
+        System.out.println("Path for png :"+path);
+        File dest = new File(path);
+        try {
+			FileUtils.copyFile(source, dest);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Capture Failed "+e.getMessage());
+		}
+         
+        return dest.getPath();
     }
 }

@@ -20,13 +20,13 @@
 Feature: Demo Website Testing
   @Newtest
   Scenario: Verify Full Name 
-  	Given  open application in "Chrome"
+  	Given  I am on Demo Application
   	When  i enter firstname and middlename and lastname
   	Then  full Name is displayed
   
   @Oldtest
   Scenario Outline: Verify full name concatination
-  	Given  open application in "Chrome"
+  	Given I am on Demo Application
   	When i enter "<firstname>" and "<middlename>" and"<lastname>"
   	Then full name is displayed
   	

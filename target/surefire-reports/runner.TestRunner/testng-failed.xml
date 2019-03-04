@@ -6,15 +6,4 @@
       <class name="runner.TestRunner"/>
     </classes>
   </test> <!-- Command line test -->
-  <test name="Command line test(failed)">
-    <classes>
-      <class name="runner.TestRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- runner.TestRunner -->
-    </classes>
-  </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [runner.TestRunner] -->

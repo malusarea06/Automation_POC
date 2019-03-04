@@ -5,14 +5,16 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Properties;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+
 import org.junit.runner.RunWith;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -35,23 +37,30 @@ import utilities.ExtentReport;
 		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"},
 		tags = {"@Newtest"}
 		)
-//
+
 public class TestRunner extends AbstractTestNGCucumberTests{
 	static ExtentHtmlReporter htmlReporter;
     static ExtentReports extent;
     static ExtentTest test;
+    
+    
+    
 	@BeforeClass
     public  static void setup() throws MalformedURLException {
  
-		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-		 
-//        extentProperties.setReportPath("output/myreport.html");
+		
+		htmlReporter = new ExtentHtmlReporter(".//output//report.html");	
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		test = extent.createTest("Demo Test");
+//      sextentProperties.setReportPath("output/myreport.html");
        
     }
 	
 	@AfterClass
     public static void teardown() throws Exception {
         Reporter.loadXMLConfig(new File(".//extent-config.xml"));
+        String temp = ExtentReport.capture(StepDefinition.driver);
      
         Properties p = System.getProperties();
         p.list(System.out);
@@ -59,7 +68,9 @@ public class TestRunner extends AbstractTestNGCucumberTests{
         Reporter.setSystemInfo("os Name", System.getProperty("os.name"));
         Reporter.setSystemInfo("os Version", System.getProperty("os.version"));
         Reporter.setTestRunnerOutput("Test runner output message");  
-       
+        Reporter.addScreenCaptureFromPath(temp);					//add screenshot to report
+        extent.flush();  
+        StepDefinition.driver.close();
     }
 	
 	

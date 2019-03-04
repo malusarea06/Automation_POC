@@ -2,9 +2,10 @@ package stepDefinition;
 
 import java.io.File;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,15 +14,15 @@ import pageObject.Homepage;
 import utilities.ConfigFileReader;
 
 public class StepDefinition {
-static WebDriver driver;
+public static WebDriver driver;
 
 ConfigFileReader configreader;
 String fullName;
 //File file;
 public String url;
 public String driverP;
-@Given("^open application in \"([^\"]*)\"$")
-	public void open_application_in(String browser) throws Throwable {
+@Given("^I am on Demo Application$")
+public void i_am_on_Demo_Application() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	 	
 	
