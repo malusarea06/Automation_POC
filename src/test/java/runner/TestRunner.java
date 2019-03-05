@@ -32,7 +32,7 @@ import utilities.ExtentReport;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features="Feature/MyFeature.feature",
+		features="Feature/",
 		glue= {"stepDefinition"},
 		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"}
 		
