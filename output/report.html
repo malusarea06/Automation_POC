@@ -38,8 +38,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1)" view='testrunner-logs-view'><i class='material-icons'>note</i></a></li>
 		</ul>
 
@@ -53,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Mar 4, 2019 03:27:10 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Mar 5, 2019 11:14:27 AM</span>
 				</a>
 			</li>
 			<li>
@@ -86,16 +85,6 @@
 			<!-- test toggle -->
 
 			<!-- category toggle -->
-			<div class='chip transparent'>
-				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
-					<i class='material-icons'>local_offer</i> Category
-				</a>
-				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@Newtest</a></li>
-					<li class='divider'></li>
-					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
-				</ul>
-			</div>
 			<!-- category toggle -->
 
 			<!-- clear filters -->
@@ -154,7 +143,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -169,7 +158,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>16</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -189,46 +178,119 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>Demo Website Testing</span>
-						<span class='test-time'>Mar 4, 2019 03:27:10 PM</span>
+						<span class='test-time'>Mar 5, 2019 11:14:27 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='3' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@Newtest</span>
-	</div>
-	<span class='duration right label'>0h 0m 2s+239ms</span>
+<div class='scenariooutline node' test-id='3' status='pass'>
+	<span class='duration right label'>0h 0m 6s+371ms</span>
 	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Verify Full Name</span>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Verify full name concatination</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='4' class='node given pass' status='pass'>
+		<li test-id='4' class='node scenario pass' status='pass'>
 			
-			<b>Given</b>
+			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Given I am on Demo Application</span>
-				<div class='pre'>passed</div>
+			<span class="bdd-step-name">Verify full name concatination</span>
 			
+				<ul class='steps'>
+					<li test-id='5' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is on Demo Application</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='6' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When User enter "Aniket" , "Satyawan" and "Malusare"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='7' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User submits the form</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='8' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then full name is displayed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
 		</li>
-		<li test-id='5' class='node when pass' status='pass'>
+		<li test-id='9' class='node scenario pass' status='pass'>
 			
-			<b>When</b>
+			<b>Scenario</b>
 			
-			<span class="bdd-step-name">When i enter firstname and middlename and lastname</span>
-				<div class='pre'>passed</div>
+			<span class="bdd-step-name">Verify full name concatination</span>
 			
+				<ul class='steps'>
+					<li test-id='10' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is on Demo Application</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='11' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When User enter "Karan" , "Rajesh" and "Patil"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='12' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User submits the form</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='13' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then full name is displayed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
 		</li>
-		<li test-id='6' class='node then pass' status='pass'>
+		<li test-id='14' class='node scenario pass' status='pass'>
 			
-			<b>Then</b>
+			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Then full Name is displayed</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="/Users/aniketmalusare/eclipse-workspace/com.demopoc.capco/Screenshots/2019_03_04__1527541.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
+			<span class="bdd-step-name">Verify full name concatination</span>
 			
+				<ul class='steps'>
+					<li test-id='15' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is on Demo Application</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='16' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When User enter "Swapnil" , "Prakash" and "Hire"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='17' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User submits the form</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='18' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then full name is displayed</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='19' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify full name concatination</span>
+			
+				<ul class='steps'>
+					<li test-id='20' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is on Demo Application</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='21' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When User enter "Tejal" , "Shivaji" and "Thorve"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='22' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User submits the form</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='23' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then full name is displayed</span>
+						<ul class='screenshots right'>
+							<li><a data-featherlight="image" href="/Users/aniketmalusare/eclipse-workspace/com.demopoc.capco/Screenshots/2019_03_05__1114549.png"><i class='material-icons'>panorama</i></a></li>
+						</ul>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
 		</li>
 	</ul>
 </div>
@@ -259,76 +321,6 @@
 
 </div>
 <!-- test view -->
-<div id='category-view' class='view hide'>
-
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-					<i class='material-icons'>search</i> Search
-				</a>
-				
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-				
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-
-	<div class='subview-left left'>
-		
-		<div class='view-summary'>
-			<h5>Categories</h3>
-			<ul id='category-collection' class='category-collection'>
-				
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Newtest</span>
-						<span class='category-status right'>
-							<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Mar 4, 2019 03:27:10 PM</td>
-										<td class='linked' test-id='3'>Demo Website Testing.Verify Full Name</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-
-			</ul>
-		</div>
-	</div>
-
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='category-name'></h5>
-		</div>
-	</div>
-</div>
 <!-- category view -->
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
@@ -345,31 +337,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>16</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 4, 2019 03:27:10 PM</div>
+					<div class='panel-lead'>Mar 5, 2019 11:14:27 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 4, 2019 03:27:13 PM</div>
+			 		<div class='panel-lead'>Mar 5, 2019 11:14:34 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>3,080ms</div>
+					<div class='panel-lead'>7,240ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -393,26 +385,6 @@
 								<td>os Version</td>
 								<td>10.13.4</td>
 							</tr>
-					</table>
-				</div>
-			</div>
-			<div class='col s4'>
-				<div class='card-panel dashboard-categories'>
-					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
-					
-					<table>
-						<tr>
-							<th>Name</th>
-							<th>Passed</th>
-							<th>Failed</th>
-							<th>Others</th>
-						</tr>
-						<tr>
-							<td>@Newtest</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-						</tr>
 					</table>
 				</div>
 			</div>
@@ -443,7 +415,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 1,
+				passChild: 4,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -452,7 +424,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 3,
+				passGrandChild: 16,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

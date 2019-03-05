@@ -17,17 +17,13 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-Feature: Demo Website Testing
-  @Newtest
-  Scenario: Verify Full Name 
-  	Given  I am on Demo Application
-  	When  i enter firstname and middlename and lastname
-  	Then  full Name is displayed
+Feature: Display full name 
+
   
-  @Oldtest
-  Scenario Outline: Verify full name concatination
-  	Given I am on Demo Application
-  	When i enter "<firstname>" and "<middlename>" and"<lastname>"
+  Scenario Outline: To Verify concatination of full name 
+  	Given User is on Demo Application
+  	When User enter "<firstname>" , "<middlename>" and "<lastname>"
+  	And User submits the form
   	Then full name is displayed
   	
   	Examples:

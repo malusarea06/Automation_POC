@@ -34,8 +34,8 @@ import utilities.ExtentReport;
 @CucumberOptions(
 		features="Feature/MyFeature.feature",
 		glue= {"stepDefinition"},
-		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"},
-		tags = {"@Newtest"}
+		plugin= {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"}
+		
 		)
 
 public class TestRunner extends AbstractTestNGCucumberTests{
@@ -58,7 +58,7 @@ public class TestRunner extends AbstractTestNGCucumberTests{
     }
 	
 	@AfterClass
-    public static void teardown() throws Exception {
+    public static void tearDown() throws Exception {
         Reporter.loadXMLConfig(new File(".//extent-config.xml"));
         String temp = ExtentReport.capture(StepDefinition.driver);
      
