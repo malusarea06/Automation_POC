@@ -60,7 +60,7 @@ public class TestRunner extends AbstractTestNGCucumberTests{
 	@AfterClass
     public static void tearDown() throws Exception {
         Reporter.loadXMLConfig(new File(".//extent-config.xml"));
-        String temp = ExtentReport.capture(StepDefinition.driver);
+ //       String temp = ExtentReport.capture(StepDefinition.driver);
      
         Properties p = System.getProperties();
         p.list(System.out);
@@ -68,8 +68,8 @@ public class TestRunner extends AbstractTestNGCucumberTests{
         Reporter.setSystemInfo("os Name", System.getProperty("os.name"));
         Reporter.setSystemInfo("os Version", System.getProperty("os.version"));
         Reporter.setTestRunnerOutput("Test runner output message");  
-        Reporter.addScreenCaptureFromPath(temp);					//add screenshot to report
-        extent.flush();  
+//        Reporter.addScreenCaptureFromPath(temp);					//add screenshot to report
+//        extent.flush();  
         StepDefinition.driver.close();
     }
 	
