@@ -1,6 +1,6 @@
 Feature: DisplayMiddleName
 
-  @ORPHAN
+  @AP-9 @OPEN
   Scenario Outline: To Verify concatination of full name 
       Given User is on Demo Application
         When User enter "<firstname>" , "<middlename>" and "<lastname>"
