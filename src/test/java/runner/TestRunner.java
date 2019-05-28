@@ -51,7 +51,7 @@ public class TestRunner extends AbstractTestNGCucumberTests{
        
     }
 	
-	@AfterMethod
+	
 	@AfterClass
     public static void tearDown() throws Exception {
         Reporter.loadXMLConfig(new File(".//extent-config.xml"));
