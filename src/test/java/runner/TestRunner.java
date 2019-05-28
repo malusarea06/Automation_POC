@@ -1,11 +1,11 @@
 package runner;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.util.Properties;
 
-import org.junit.After;
-import org.junit.runner.RunWith;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -18,7 +18,7 @@ import com.cucumber.listener.ExtentProperties;
 import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+//import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import stepDefinition.StepDefinition;
 //import utilities.AzureReport;
@@ -51,6 +51,7 @@ public class TestRunner extends AbstractTestNGCucumberTests{
        
     }
 	
+	@AfterMethod
 	@AfterClass
     public static void tearDown() throws Exception {
         Reporter.loadXMLConfig(new File(".//extent-config.xml"));
