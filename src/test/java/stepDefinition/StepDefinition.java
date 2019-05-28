@@ -3,6 +3,7 @@ package stepDefinition;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
 import cucumber.api.java.en.Given;
@@ -27,8 +28,13 @@ public void user_is_on_Demo_Application() throws Throwable {
 			url = configreader.getAppUrlTeamEnv();
 			driverP = configreader.getDriverPath();
 		
-			System.setProperty("webdriver.chrome.driver",driverP);
-			driver = new ChromeDriver();
+			ChromeOptions chromeOptions= new ChromeOptions();
+			chromeOptions.setBinary("C:\\Users\\gmis\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+			 System.setProperty("webdriver.chrome.driver","C:\\Users\\gmis\\git\\Automation_POC\\Resource\\chromedriver.exe");
+			 //driver = new ChromeDriver(chromeOptions);
+			
+			//System.setProperty("webdriver.chrome.driver",driverP);
+			driver = new ChromeDriver(chromeOptions);
 		  
 	  
 			driver.get(url);
